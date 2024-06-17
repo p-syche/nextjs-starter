@@ -1,6 +1,12 @@
-"use client";
 import Link from "next/link";
-import Login, { Render } from "react-1ogin-page";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sign In Page | Free Next.js Template for Startup and SaaS",
+  description: "This is Sign In Page for Startup Nextjs Template",
+  // other metadata
+};
 
 const SigninPage = () => {
   return (
@@ -10,62 +16,6 @@ const SigninPage = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[500px] rounded bg-white px-6 py-10 shadow-three dark:bg-dark sm:p-[60px]">
-                <Login>
-                  <Render>
-                    {({ fields, buttons, blocks, $$index }) => {
-                      return (
-                        <div>
-                          <header>
-                            {" "}
-                            {blocks.logo}
-                            {blocks.title}
-                          </header>
-                          <div>
-                            <label>{fields.username}</label>
-                          </div>
-                          <div>
-                            <label>{fields.password}</label>
-                          </div>
-                          <div>
-                            {buttons.submit}
-                            {buttons.reset}
-                          </div>
-                        </div>
-                      );
-                    }}
-                  </Render>
-
-                  <Login.Block keyname="title" tagName="span">
-                    Login
-                  </Login.Block>
-                  <Login.Input
-                    keyname="username"
-                    placeholder="Please input Username"
-                    //   type='radio'
-                  />
-                  <Login.Input
-                    keyname="password"
-                    placeholder="please enter password"
-                  />
-                  <Login.Button
-                    onClick={() => console.log("clicked")}
-                    keyname="submit"
-                    type="submit"
-                    className="lg:text-left' mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4"
-                  >
-                    <h2 className="mb-3  font-semibold">Submit</h2>
-                    <a href="#">
-                      <span>what!</span>
-                    </a>
-                  </Login.Button>
-                  <Login.Button
-                    keyname="reset"
-                    type="reset"
-                    className="lg:text-left' mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4"
-                  >
-                    <h2 className="mb-3 font-semibold">Reset</h2>
-                  </Login.Button>
-                </Login>
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
                   Sign in to your account
                 </h3>
